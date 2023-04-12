@@ -1,0 +1,23 @@
+version: '3.1'
+
+services:
+
+  node:
+    build:
+      context: .
+      target: base
+    user: "node"
+    volumes:
+      - ./src:/home/node/app/src
+    ports:
+      - "3000:3000"
+    expose:
+      - "3000"
+    command: "npm run dev"
+
+  mongo:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example

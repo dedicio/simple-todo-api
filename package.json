@@ -1,0 +1,21 @@
+{
+  "name": "simples-todo-api",
+  "version": "1.0.0",
+  "description": "A simples To-do API using TypeScript, MongoDB, Docker and Fastify",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -p .",
+    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/index.ts"
+  },
+  "keywords": [],
+  "author": "Dedicio Coelho",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "nodemon": "^2.0.22",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "fastify": "^4.15.0"
+  }
+}
