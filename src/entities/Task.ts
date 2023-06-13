@@ -1,8 +1,4 @@
-interface ITask {
-  id: string
-  description: string
-  done: boolean
-}
+import ITask from './ITask'
 
 export default class Task {
   private _id: string
@@ -17,19 +13,19 @@ export default class Task {
     this._done = done
   }
 
-  public get id() : string {
+  get id() : string {
     return this._id
   }
 
-  public set id(value: string) {
+  set id(value : string) {
     this._id = value
   }
   
-  public get description() : string {
+  get description() : string {
     return this._description
   }
   
-  set description(value: string) {
+  set description(value : string) {
     this._description = value
   }
 
@@ -37,7 +33,7 @@ export default class Task {
     return this._done
   }
 
-  set done(value: boolean) {  
+  set done(value : boolean) {  
     this._done = value
   }
 }
